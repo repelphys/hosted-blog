@@ -1,0 +1,27 @@
+baseURL = ''
+languageCode = 'en-us'
+title = 'The CollabChain Digest'
+theme = 'beautifulhugo'
+
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+sectionPagesMenu = 'main'
+
+[menu]
+
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
