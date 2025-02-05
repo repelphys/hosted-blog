@@ -1,0 +1,420 @@
+
+
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>Advanced Deployment - </title>
+
+  <meta name="description" content="Lock.js utilises Hardhat Ignition to deploy a Lock contract. This is much more flexible than deploy.js
+const { buildModule } = require(&#34;@nomicfoundation/hardhat-ignition/modules&#34;);
+
+const JAN_1ST_2030 = 1893456000;
+const ONE_GWEI = 1_000_000_000n;
+
+module.exports = buildModule(&#34;LockModule&#34;, (m) =&gt; {
+  const unlockTime = m.getParameter(&#34;unlockTime&#34;, JAN_1ST_2030);
+  const lockedAmount = m.getParameter(&#34;lockedAmount&#34;, ONE_GWEI);
+
+  const lock = m.contract(&#34;Lock&#34;, [unlockTime], {
+    value: lockedAmount,
+  });
+
+  return { lock };
+});
+
+Hardhat Ignition: buildModule is imported from Hardhat Ignition. This allows us to define a deployment module.
+Define constants: Two constants are defined:
+
+JAN_1ST_2030: A Unix timestamp for January 1st, 2030.
+ONE_GWEI: This represents a single Gwei (a small unit of Ether).
+
+
+Build module: buildModule defines a deployment module called LockModule - inside of which contains:
+
+parameter retrieval (unlockTime and lockedAmount) with default values.
+Lock contract is deployed, which will send unlockTime as a constructor argument and forwards lockedAmount of Ether with the deployment.
+
+
+Return the Contract: Lastly, the deployed Lock contract instance is returned.
+"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "The CollabChain Digest",
+    
+    "url": "\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "\/posts\/deploymentadvanced\/",
+          "name": "Advanced deployment"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Abhinav K."
+  },
+  "headline": "Advanced Deployment",
+  "description" : "Lock.js utilises Hardhat Ignition to deploy a Lock contract. This is much more flexible than deploy.js\nconst { buildModule } = require(\u0026#34;@nomicfoundation\/hardhat-ignition\/modules\u0026#34;); const JAN_1ST_2030 = 1893456000; const ONE_GWEI = 1_000_000_000n; module.exports = buildModule(\u0026#34;LockModule\u0026#34;, (m) =\u0026gt; { const unlockTime = m.getParameter(\u0026#34;unlockTime\u0026#34;, JAN_1ST_2030); const lockedAmount = m.getParameter(\u0026#34;lockedAmount\u0026#34;, ONE_GWEI); const lock = m.contract(\u0026#34;Lock\u0026#34;, [unlockTime], { value: lockedAmount, }); return { lock }; }); Hardhat Ignition: buildModule is imported from Hardhat Ignition. This allows us to define a deployment module. Define constants: Two constants are defined: JAN_1ST_2030: A Unix timestamp for January 1st, 2030. ONE_GWEI: This represents a single Gwei (a small unit of Ether). Build module: buildModule defines a deployment module called LockModule - inside of which contains: parameter retrieval (unlockTime and lockedAmount) with default values. Lock contract is deployed, which will send unlockTime as a constructor argument and forwards lockedAmount of Ether with the deployment. Return the Contract: Lastly, the deployed Lock contract instance is returned. ",
+  "inLanguage" : "en",
+  "wordCount":  154 ,
+  "datePublished" : "2025-01-02T12:39:02\u002b00:00",
+  "dateModified" : "2025-01-02T12:39:02\u002b00:00",
+  "image" : "\/",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "\/posts\/deploymentadvanced\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+
+<meta property="og:title" content="Advanced Deployment" />
+<meta property="og:description" content="Lock.js utilises Hardhat Ignition to deploy a Lock contract. This is much more flexible than deploy.js
+const { buildModule } = require(&#34;@nomicfoundation/hardhat-ignition/modules&#34;);
+
+const JAN_1ST_2030 = 1893456000;
+const ONE_GWEI = 1_000_000_000n;
+
+module.exports = buildModule(&#34;LockModule&#34;, (m) =&gt; {
+  const unlockTime = m.getParameter(&#34;unlockTime&#34;, JAN_1ST_2030);
+  const lockedAmount = m.getParameter(&#34;lockedAmount&#34;, ONE_GWEI);
+
+  const lock = m.contract(&#34;Lock&#34;, [unlockTime], {
+    value: lockedAmount,
+  });
+
+  return { lock };
+});
+
+Hardhat Ignition: buildModule is imported from Hardhat Ignition. This allows us to define a deployment module.
+Define constants: Two constants are defined:
+
+JAN_1ST_2030: A Unix timestamp for January 1st, 2030.
+ONE_GWEI: This represents a single Gwei (a small unit of Ether).
+
+
+Build module: buildModule defines a deployment module called LockModule - inside of which contains:
+
+parameter retrieval (unlockTime and lockedAmount) with default values.
+Lock contract is deployed, which will send unlockTime as a constructor argument and forwards lockedAmount of Ether with the deployment.
+
+
+Return the Contract: Lastly, the deployed Lock contract instance is returned.
+">
+<meta property="og:url" content="/posts/deploymentadvanced/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="The CollabChain Digest" />
+
+  <meta name="twitter:title" content="Advanced Deployment" />
+  <meta name="twitter:description" content="Lock.js utilises Hardhat Ignition to deploy a Lock contract. This is much more flexible than deploy.js
+const { buildModule } = require(&#34;@nomicfoundation/hardhat-ignition/modules&#34;);
+
+const …">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="generator" content="Hugo 0.142.0">
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="The CollabChain Digest"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.6.0/css/all.css" integrity="sha384-h/hnnw1Bi4nbpD6kE7nYfCXzovi622sY5WBxww8ARKwpdLj5kUWjRuyiXaD1U2JT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="/css/syntax.css" /><link rel="stylesheet" href="/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">The CollabChain Digest</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Home" href="/">Home</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Posts" href="/posts/">Posts</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="posts-heading">
+              
+                <h1>Advanced Deployment</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><code>Lock.js</code> utilises <strong>Hardhat Ignition</strong> to deploy a <code>Lock</code> contract. This is much more flexible than <code>deploy.js</code></p>
+<pre tabindex="0"><code>const { buildModule } = require(&#34;@nomicfoundation/hardhat-ignition/modules&#34;);
+
+const JAN_1ST_2030 = 1893456000;
+const ONE_GWEI = 1_000_000_000n;
+
+module.exports = buildModule(&#34;LockModule&#34;, (m) =&gt; {
+  const unlockTime = m.getParameter(&#34;unlockTime&#34;, JAN_1ST_2030);
+  const lockedAmount = m.getParameter(&#34;lockedAmount&#34;, ONE_GWEI);
+
+  const lock = m.contract(&#34;Lock&#34;, [unlockTime], {
+    value: lockedAmount,
+  });
+
+  return { lock };
+});
+</code></pre><ol>
+<li><strong>Hardhat Ignition</strong>: <code>buildModule</code> is imported from Hardhat Ignition. This allows us to define a deployment module.</li>
+<li><strong>Define constants</strong>: Two constants are defined:
+<ul>
+<li><code>JAN_1ST_2030</code>: A Unix timestamp for January 1st, 2030.</li>
+<li><code>ONE_GWEI</code>: This represents a single Gwei (a small unit of Ether).</li>
+</ul>
+</li>
+<li><strong>Build module</strong>: <code>buildModule</code> defines a deployment module called <code>LockModule</code> - inside of which contains:
+<ul>
+<li>parameter retrieval (<code>unlockTime</code> and <code>lockedAmount</code>) with default values.</li>
+<li><code>Lock</code> contract is deployed, which will send <code>unlockTime</code> as a constructor argument and forwards <code>lockedAmount</code> of Ether with the deployment.</li>
+</ul>
+</li>
+<li><strong>Return the Contract</strong>: Lastly, the deployed <code>Lock</code> contract instance is returned.</li>
+</ol>
+
+
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="/posts/deploymenttechstack/" data-toggle="tooltip" data-placement="top" title="Deployment Tech Stack">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="/posts/dashboard/" data-toggle="tooltip" data-placement="top" title="Dashboard">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      <footer>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2025
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="/">The CollabChain Digest</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.142.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script src="/js/main.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
